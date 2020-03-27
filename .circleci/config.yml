@@ -22,6 +22,5 @@ workflows:
             context: test
             create-repo: true
             dockerfile: Dockerfile
-            path: Dockerfile
             repo: strapi
             tag: 'latest'
