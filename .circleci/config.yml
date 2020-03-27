@@ -12,17 +12,15 @@ jobs:
           steps:
             - run: npm install
             - run: ./bin/build.js
-  build_and_push_image:
-    jobs:
-      - aws-ecr/build-and-push-image:
-          context: test
-          create-repo: true
-          dockerfile: Dockerfile
-          path: Dockerfile
-          repo: strapi
-          tag: 'latest'
+
 workflows:
     build-and-test:
       jobs:
         - build-and-test
-        - build_and_push_image
+        - aws-ecr/build-and-push-image:
+            context: test
+            create-repo: true
+            dockerfile: Dockerfile
+            path: Dockerfile
+            repo: strapi
+            tag: 'latest'
