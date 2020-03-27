@@ -6,7 +6,8 @@
   "author": "Alexandre Bodin <bodin.alex@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "./bin/build.js"
   },
   "dependencies": {
     "chalk": "^2.4.2",
